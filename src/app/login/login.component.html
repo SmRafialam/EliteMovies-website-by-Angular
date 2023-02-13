@@ -15,13 +15,14 @@
 <div class="login-form">
   <div class="forom-group">
     <label for="uname">Username</label>
-    <input type="text" name="uname" class="form-control">
+    <input type="text" name="uname" class="form-control" [(ngModel)]="username">
   </div>
   <div class="forom-group">
-    <label for="pswrd">Password</label>
-    <input type="password" name="pswrd" class="form-control">
+    <label for="pass">Password</label>
+    <input type="password" name="pass" class="form-control" [(ngModel)]="password">
   </div>
   <div class="btn-container">
-    <button class="btn btn-dark">Login</button>
+    <div class="error text-danger">{{errMsg}}</div>
+    <button class="btn btn-dark" (click)="login()">Login</button>
   </div>
 </div>
